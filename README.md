@@ -3,6 +3,8 @@
 ## Project Overview
 This tool generates interlinear books, ideal for language learners desiring to read literature in its original language with an accompanying line-by-line translation.
 
+Right now in only translates from German to Spanish. You can set up the languages and the database according to you preferences.
+
 ## Features
 - Extracts unique words from a `.txt` file containing the original book.
 - Translates words and stores them in a PostgreSQL database.
@@ -50,6 +52,28 @@ Replace `[path-to-your-text-file]` with the relative or absolute path to your `.
 ## Built With
 - Python - The programming language used.
 - PostgreSQL - Database system used for storing translations.
+
+## Roadmap
+
+# Enhancement Wishlist
+
+This list represents a collection of potential enhancements for the Interlinear Book Project. Community members are encouraged to explore and contribute.
+
+### Languages and Translation
+- [ ] Support for additional languages.
+- [ ] Context-aware translation enhancements
+
+### User Interface and Experience
+- [ ] Specialized CSS themes for interlinear texts
+- [ ] Customizable reader interface options
+
+
+### Data and Formats
+- [ ] Support for more file types (e.g., `.epub`, `.pdf`)
+
+
+_We welcome contributions and suggestions to expand this list._
+
 
 ## License
 This project is licensed under the MIT License - see the `LICENSE.md` file for details.
