@@ -8,12 +8,6 @@ import sys
 import argparse
 from contextlib import closing
 
-#### TO-DO LIST ###
-# [] Improve Database
-# [] Improve traslation of word by context
-# [] Make a CSS for the ebook
-
-
 
 ##########################
 ## CREATING THE BOOK #####
