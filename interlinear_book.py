@@ -2,7 +2,7 @@
 from modules.database import connect_to_db, insert_single_word, insert_several_words, abrir_diccionario
 from modules.text_processing import extract_unique_words, format_word
 from modules.translation import translate_words
-from modules.ebook_conversion import convert_book
+from modules.ebook_conversion import convert_book, html_to_pdf
 import os
 import sys
 import argparse
@@ -104,6 +104,7 @@ def main():
 
     full_input = filename + ".html"
     full_output = filename + ".azw3"
+    pdf_output = filename + '.pdf'
 
     with closing(connect_to_db()) as conn:  # Ensures that the connection is closed
         unique_word_list = extract_unique_words(file_path)
@@ -118,6 +119,7 @@ def main():
         interlineate(file_path, dictionary, full_input)
 
     # convert_book(full_input, full_output)  # Uncomment if conversion is required
+    html_to_pdf(full_output, pdf_output)
 
 if __name__ == "__main__":
     try:

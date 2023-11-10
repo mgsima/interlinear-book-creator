@@ -1,4 +1,18 @@
 import subprocess
+import pdfkit
+
+def html_to_pdf(input_html, output_pdf):
+    options = {
+        'page-size': 'A5',
+        'margin-top': '0.75in',
+        'margin-right': '0.75in',
+        'margin-bottom': '0.75in',
+        'margin-left': '0.75in',
+        'encoding': "UTF-8",
+        'custom-header': [('Accept-Encoding', 'gzip')]
+    }
+
+    pdfkit.from_file(input_html, output_pdf, options=options)
 
 ## CONVERSION OF FORMAT OF BOOKS ##
 def convert_book(input_path: str, output_path: str):
